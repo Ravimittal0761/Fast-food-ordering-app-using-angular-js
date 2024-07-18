@@ -1,0 +1,35 @@
+.login-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  ion-card {
+    width: 90%;
+    max-width: 400px;
+    background: #ffffff; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+  ion-card-header {
+    text-align: center;
+    ion-card-title {
+      font-size: 1.5rem;
+    }
+  }
+
+  ion-card-content {
+    ion-item {
+      --border-color:red; /* Border color for input fields */
+      --highlight-color-focused: transparent; /* Removes highlight color when focused */
+      margin-bottom: 12px; /* Spacing between items */
+    }
+
+    ion-button {
+      --background: #3498db; /* Button background color */
+      --color: #ffffff; /* Button text color */
+      margin-top: 20px; /* Spacing from items above */
+    }
+  }
+}

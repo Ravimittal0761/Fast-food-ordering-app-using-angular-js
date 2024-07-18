@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Delivery Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Address</ion-label>
+    <ion-input [(ngModel)]="address"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Pin Code</ion-label>
+    <ion-input type="number" [(ngModel)]="pinCode"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Country</ion-label>
+    <ion-select [(ngModel)]="selectedCountry">
+      <ion-select-option *ngFor="let country of countries" [value]="country">{{ country }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>State</ion-label>
+    <ion-select [(ngModel)]="selectedState">
+      <ion-select-option *ngFor="let state of states" [value]="state">{{ state }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Delivery Benefit</ion-label>
+    <ion-select [(ngModel)]="selectedBenefit">
+      <ion-select-option *ngFor="let benefit of benefits" [value]="benefit">{{ benefit }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>30 Minute Offer</ion-label>
+    <ion-toggle [(ngModel)]="offerAccepted"></ion-toggle>
+  </ion-item>
+
+  <ion-button expand="block" (click)="saveDeliveryDetails()">Save Delivery Details</ion-button>
+</ion-content>
